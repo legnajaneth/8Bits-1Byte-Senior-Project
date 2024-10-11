@@ -1,0 +1,67 @@
+{
+  "name": "senior-project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emailjs/browser": "^4.1.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@paypal/react-paypal-js": "^8.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "firebase": "^10.11.1",
+    "framer-motion": "^11.0.22",
+    "js-cookie": "^3.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.22.2",
+    "react-scripts": "^5.0.1",
+    "survey-core": "^1.9.129",
+    "survey-react-ui": "^1.9.129",
+    "util": "^0.12.5",
+    "uuid": "^9.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.2",
+    "babel-jest": "^29.7.0",
+    "css-loader": "^6.8.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.7.0",
+    "jest-fetch-mock": "^3.0.3",
+    "jest-styled-components": "^7.2.0",
+    "postcss-loader": "^7.3.3",
+    "style-loader": "^3.3.3",
+    "text-encoding": "^0.7.0"
+  }
+}

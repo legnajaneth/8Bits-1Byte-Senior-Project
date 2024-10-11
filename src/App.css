@@ -1,0 +1,466 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #80b287;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin: 0;
+  align-items: center;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: black;
+}
+
+.addExternship {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.addExternship-inner {
+  display: flex;
+  width: 40.0625;
+  height: 46rem;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1.0625rem 0.5625rem;
+  position: relative;
+  padding: 0.875rem 0.75rem;
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+  border-radius: 0.937rem;
+}
+
+.addExternship-inner .addExternship-btn {
+  display: flex;
+  width: 4.8rem;
+  height: 2.5rem;
+  padding: 0.75rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  right: 6.625rem;
+  bottom: 0.9375rem;
+
+  border-radius: 9.375rem;
+  border: 1px solid var(--Black, #060606);
+  background: var(--Black, #060606);
+  color: var(--White, #fff);
+
+  font-family: Roboto;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.addExternship-inner .addExternship-btn:hover {
+  background: rgb(49, 49, 49);
+}
+
+.addExternship-inner .close-btn {
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  right: 1.125rem;
+  bottom: 0.9375rem;
+
+  border-radius: 9.375rem;
+  border: 1px solid var(--Black, #060606);
+  background: var(--White, #fff);
+  color: var(--White, #fff);
+
+  color: var(--Black, #060606);
+  font-family: Roboto;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 0.9375rem */
+  text-decoration-line: underline;
+}
+
+.addExternship-inner .close-btn:hover {
+  background: rgb(197, 197, 197);
+}
+
+.addExternship-inner .addExternship-text {
+  width: 38.9375rem;
+  flex-shrink: 0;
+
+  color: #000;
+
+  /* Heading/H5 */
+  font-family: Roboto;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 2.1rem */
+}
+
+.addExternship-inner .addExternshipQuestion-text {
+  width: 45.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  margin: 1.0625rem 0rem;
+
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  /* Text/Regular/Semi Bold */
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 1.5rem */
+}
+
+.addExternship-inner .addExternshipInput {
+  display: flex;
+  width: 22.8125rem;
+  padding: 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+
+  border-radius: 0.625rem;
+  border: 1px solid var(--Black, #060606);
+  background: var(--White, #fff);
+}
+
+.addExternship-inner .addExternshipInputDesc {
+  display: flex;
+  width: 37.5rem;
+  height: 11.25rem;
+  padding: 0.75rem;
+  align-items: flex-start;
+  flex-shrink: 0;
+  resize: none;
+
+  border-radius: 0.625rem;
+  border: 1px solid var(--Black, #060606);
+  background: var(--White, #fff);
+}
+
+.writeReview-inner .buttonContainer .close-btn:hover {
+  background: rgb(197, 197, 197);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.review-container {
+  font-family: "Roboto", sans-serif;
+  width: 40.125rem;
+  height: 42.4rem;
+  background: #68986f40;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-right: 1.8rem;
+  padding: 1rem;
+}
+
+#title {
+  width: 512px;
+  height: 35px;
+  flex-shrink: 0;
+  margin-top: 24px;
+  margin-bottom: 10px;
+  margin-left: 27px;
+  margin-right: 10px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 48px */
+}
+
+.organization-name {
+  margin-top: 0;
+  margin-left: 27px;
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.name {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.location-1 {
+  margin-top: 0;
+}
+
+.review-container .location,
+.review-container .city-state {
+  font-size: 24px;
+}
+
+.review-container .location {
+  color: black;
+}
+
+.review-container .city-state {
+  color: rgb(0, 0, 0);
+}
+
+.title-and-bookmark {
+  display: flex;
+  align-items: flex-end;
+}
+
+.review-container #book-mark {
+  width: 18.667px;
+  height: 25.833px;
+  fill: #000;
+  cursor: pointer;
+}
+
+.description h3 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 33.6px */
+  margin-left: 27px;
+  margin-bottom: 0;
+}
+.description p {
+  margin-bottom: 0;
+}
+
+.review-desc {
+  flex-shrink: 0;
+  overflow: hidden;
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  margin-top: 0;
+  margin-left: 27px;
+  word-wrap: break-word;
+  text-indent: 1rem;
+  text-align: left;
+  margin-bottom: 0;
+  margin-right: 80px;
+}
+.ratings {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+
+.my-rating {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-top: 0;
+  margin-left: 27px;
+  margin-bottom: 5px;
+}
+
+.rating-title,
+.percent-title,
+.paid-title {
+  margin-left: 70px;
+}
+.rate {
+  margin-left: 182px;
+}
+.percent {
+  margin-left: 155px;
+}
+.paid-result {
+  margin-left: 165px;
+}
+
+.margin {
+  margin-bottom: 5px;
+}
+
+.user-review {
+  display: flex;
+  flex-direction: row;
+}
+
+.user-review span {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-left: 28px;
+}
+
+.user-review button {
+  height: 39px;
+  padding: 8px 20px;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: 320px;
+  background-color: #68986f;
+  border-radius: 8px 8px;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-bottom: 24px;
+}
+
+.user-review-container {
+  display: grid;
+  grid-template-columns: 75px 67fr 67fr; /* Set the width of the columns */
+  grid-template-rows: auto auto 1fr;
+  border: 0.5px solid black;
+  width: 618px; /* Set the width of the container */
+  height: 283px;
+  justify-items: center;
+  margin-left: 12px;
+  row-gap: 12px;
+}
+
+.user-image {
+  grid-column: 1;
+  width: 41px;
+  height: 40px;
+  border-radius: 41px;
+  object-fit: cover;
+  justify-self: start;
+  margin-left: 24px;
+  margin-top: 12px;
+}
+
+.user-name-1 {
+  grid-column: 2;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+  justify-self: start;
+  margin-top: 20px;
+}
+.rating {
+  grid-column: 3;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  justify-self: end;
+  margin-top: 12px;
+  margin-right: 24px;
+}
+
+.user-preference {
+  grid-column: 1 / span 2;
+  justify-self: start;
+  margin-left: 24px;
+}
+.user-preference-1 {
+  grid-column: 1 / span2;
+  justify-self: start;
+  margin-left: 24px;
+  margin-top: 0;
+}
+
+.paragraph {
+  grid-column: 1 / span 3;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+  color: #000;
+  overflow: hidden;
+  justify-self: start;
+  margin-left: 24px;
+  margin-right: 24px;
+  text-indent: 2rem;
+}
+
+.review-container {
+  overflow: clip;
+}
+
+::-webkit-scrollbar {
+  width: 5px; 
+  height: 7px;
+}
+
+/* Styling the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #63636486;
+  outline: 1px solid #63636486;
+  border-radius: 50px;
+}
+
+/* Styling the scrollbar track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+}
+
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #63636486;
+  }
+}

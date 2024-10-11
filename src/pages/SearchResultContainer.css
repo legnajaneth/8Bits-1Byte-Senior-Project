@@ -1,0 +1,14 @@
+.result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 65px;
+  margin-top: 2rem;
+  background-color: rgb(240, 254, 240);
+  
+}
+
+.detailed-result-container {
+  height: 743px;
+}

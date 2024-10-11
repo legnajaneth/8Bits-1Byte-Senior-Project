@@ -1,0 +1,50 @@
+.navigationStyle {
+  display: flex;
+  height: 3.25rem;
+  padding: 0rem 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-image: url("../images/backround-img.png");
+}
+
+.innerContainerStyle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.clickableComponentsStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.imageStyle {
+  height: 30px;
+  width: 220px;
+}
+
+.home {
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.4s ease-in-out;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+}
+
+.home:hover {
+  background-color: #68986f;
+}
+
+.sign {
+  background-color: #68986f;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
+}
+
