@@ -2,6 +2,7 @@ import React from "react";
 import "./Dashboard.css"; 
 import NavigationBar from "./navigationBar";
 import { useNavigate } from "react-router-dom";
+import { FaBell } from "react-icons/fa"; //Importing React Icon instead of creating one
 
 function AdminDashboard() {
     const navigate = useNavigate();
@@ -16,7 +17,22 @@ function AdminDashboard() {
   return (
    
     <div>
-            <NavigationBar />
+            <div className="admin-dashboard-nav"> {/* Different nav bar placed next to the existing bar made before. */}
+                <div className="notification-icon-container">
+                    <FaBell className="notification-bell" size={24}/>
+                    <div className="notification-bell-count">{surveyData.length}</div> 
+                    <div className="dropdown">
+                        {/* Limit the number of surveys seen with slice. Only 5 will show up*/}
+                        {surveyData.slice(0,5).map((survey, index) => (
+                            <div key={index} className="dropdown-item">
+                                <p>{survey.title} - {survey.date.toLocaleDateString()}</p>
+                            </div>
+                        ))}
+                        <a onClick={() => handleNavigation("/surveys")} className ="dropdown-item">See more...</a>
+                    </div>
+                </div>
+                <NavigationBar />
+            </div>    
 
             <div className="dashboard-links">
                 <a onClick={() => handleNavigation("/")} className="link-button">Dashboard</a>
@@ -51,7 +67,7 @@ function AdminDashboard() {
             </section>
             
 
-           {/* <div className="survey-container">
+           { /*<div className="survey-container">
                 {surveyData.map((survey, index) => (
                     <div className="survey-item" key={index}>
                         <div className="survey card">
