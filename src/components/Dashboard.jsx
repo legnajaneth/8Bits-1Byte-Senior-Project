@@ -6,14 +6,20 @@ import { FaBell } from "react-icons/fa"; //Importing React Icon instead of creat
 
 function AdminDashboard() {
     const navigate = useNavigate();
-    const handleNavigation = (path) => {
-        navigate(path);
-    };
-    const surveyData = [
+    const [surveyData, setSurveyData] = useState([
         { title: "Survey 1", quantity: 10, date: new Date("2024-10-30T09:41:00") },
         { title: "Survey 2", quantity: 20, date: new Date("2024-10-29T08:30:00") },
         { title: "Survey 3", quantity: 15, date: new Date("2024-10-28T07:15:00") },
-    ];
+    ]);
+
+    // Polling or real-time listener example (stubbed for now)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            // Fetch latest survey data here
+            // Example: setSurveyData(fetchSurveysFromAPI());
+        }, 30000); // Poll every 30 seconds
+        return () => clearInterval(interval);
+    }, []);
   return (
    
     <div>
