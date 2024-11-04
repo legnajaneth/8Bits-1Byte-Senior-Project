@@ -8,12 +8,19 @@ body {
     align-items: center;
     background: none;
 }
+
+.section-layout
+{
+    display: flex;
+    justify-content: center;
+}
+
 .section-box{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px; 
     height: auto;
-    margin-left:250px;
+    justify-content: center;
     gap: 40px;
 }
 .box{ 
@@ -54,6 +61,93 @@ body {
 }
 .link-button:hover {
     background-color: #68986f;
+}
+
+/* Media query, responsive design styles for mobile devices */
+/* Styles targeting devices with 770px display */
+@media (max-width: 770px)
+{
+    .dashboard-links 
+    {
+        position: relative;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .link-button 
+    {
+        width: 120px;
+        height: 50px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-box
+    {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        max-width: 90%;
+    }
+
+    .box
+    { 
+        height: 375px;
+        width: 550px;
+        width: 90%;
+        padding: 0;
+    }
+
+    .box h1
+    {
+        text-align: center;
+    
+    }
+}
+
+/* Media query, responsive design styles for mobile devices */
+/* Styles targeting devices with 1150px display */
+@media (max-width: 1150px)
+{
+    .dashboard-links 
+    {
+        position: relative;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 150px;
+    }
+
+   .section-layout
+   {
+    display: flex;
+   } 
+   .section-box
+    { 
+        display: flex;
+        flex-direction: column;
+        height: 375px;
+        width: 550px;
+    }
+    .box
+    {
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .survey-info
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+
 }
 
 .survey-container {

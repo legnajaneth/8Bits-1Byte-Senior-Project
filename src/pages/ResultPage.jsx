@@ -172,6 +172,7 @@ function ResultPage() {
       <div style={backgroundStyle}>
         <div>
           <NavigationBar />
+
           <div style={horizontalStyle}>
             <div className={styles.container}>
               <div className={styles.searchBar} onSubmit={handleSubmit}>
@@ -187,6 +188,7 @@ function ResultPage() {
                 <button className="searchButton"></button>
               </div>
             </div>
+            
           </div>
           <div className="result-container">
             {searchResults.length === 0 ? (

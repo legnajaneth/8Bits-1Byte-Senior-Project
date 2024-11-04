@@ -34,6 +34,10 @@ const styles = {
     backgroundColor: colors.primary,
     color: colors.text, 
   },
+  searchIcon: {
+    width: "8rem",
+    height: "8rem",
+  },
 };
 
 export default styles;

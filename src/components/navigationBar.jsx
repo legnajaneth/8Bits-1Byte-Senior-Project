@@ -54,6 +54,7 @@ function NavigationBar() {
   return (
     <>
       <div className="navigationStyle">
+        
         <div className="innerContainerStyle">
           <img src={logo} alt="Logo" className="imageStyle" />
           <div className="clickableComponentsStyle">
@@ -68,7 +69,7 @@ function NavigationBar() {
                   Pricing
                 </Link>
               </li>
-              <button className="home" onClick={handleAddExternshipClick}>
+              <button className="home-fill-survey" onClick={handleAddExternshipClick}>
                 Fill Out Survey
               </button>
             </ol>
@@ -93,6 +94,7 @@ function NavigationBar() {
             )}
           </div>
         </div>
+        
       </div>
       {addExternshipButton && (
         <div

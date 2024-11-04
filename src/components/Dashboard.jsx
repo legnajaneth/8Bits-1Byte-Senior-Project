@@ -18,37 +18,46 @@ function AdminDashboard() {
     <div>
             <NavigationBar />
 
-            <div className="dashboard-links">
-                <a onClick={() => handleNavigation("/")} className="link-button">Dashboard</a>
-                <a onClick={() => handleNavigation("/account")} className="link-button">Account</a>
-                <a onClick={() => handleNavigation("/surveys")} className="link-button">Surveys</a>
-            </div>
+            <div className = "admin-panel">
 
-            <section> {/* sections for overviews of information at a quick glance for admin*/}
-              
+                <div className="dashboard-links">
+                    <a onClick={() => handleNavigation("/")} className="link-button">Dashboard</a>
+                    <a onClick={() => handleNavigation("/account")} className="link-button">Account</a>
+                    <a onClick={() => handleNavigation("/surveys")} className="link-button">Surveys</a>
+                </div>
+
+                                                            {/* Added new div to correct misalignment between the section boxes*/}
+                <section className = "section-layout"> {/* sections for overviews of information at a quick glance for admin*/}
+                
                 <div className="section-box">
                     <div className="box" onClick={() => handleNavigation("/surveys")}>
                         <div className="Survey-info">
                             <h1> There are {surveyData.length} new surveys</h1> 
                         </div>
-                   </div>
-                   <div className="box" onClick={() => handleNavigation("/Analytics")}>
+                    </div>
+                    <div className="box" onClick={() => handleNavigation("/Analytics")}>
                         <div className="User-analytic">
                             <h1>Analytics </h1>
                         </div>
-                   </div>
-                   <div className="box" onClick={() => handleNavigation("/")}>
+                    </div>
+                    <div className="box" onClick={() => handleNavigation("/")}>
                         <div className="info">
                             <h1>Info </h1>
                         </div>
-                   </div>
-                   <div className="box" onClick={() => handleNavigation("/")}>
+                    </div>
+                    <div className="box" onClick={() => handleNavigation("/")}>
                         <div className="info">    
                             <h1>Info </h1>
                         </div>
-                   </div>
+                    </div>
                 </div>
             </section>
+                
+            </div>
+            
+
+
+            
             
 
            {/* <div className="survey-container">
