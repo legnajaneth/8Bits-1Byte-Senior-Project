@@ -3,6 +3,8 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
 import SurveyDataService from '../SurveyDataService';
+import { db } from "../firebase/config"; // Ensure firebase config is set up
+import { collection, addDoc } from "firebase/firestore";
 
 
 function SurveyComponent({ surveyJson }) {
@@ -139,7 +141,12 @@ function SurveyComponent({ surveyJson }) {
   survey.onComplete.add(async (sender) => {
     const surveyData = sender.data;
     try {
-      const docId = await surveyDataService.saveSurveyResponse(surveyData);
+      //MatthewBernardinoJunio: Changed entries from adding directly to main collections to a pending survey collection.
+      const docId = await addDoc(collection(db, "pendingSurveys"), { 
+        ...surveyData,
+        isApproved: false, //Flag for approval
+        createdAt: new Date() // Adds Timestamp
+      });
       console.log("Survey data saved to Firestore with doc ID: ", docId);
       setSavedMessage("Your survey response has been saved.");
     } catch (error) {
