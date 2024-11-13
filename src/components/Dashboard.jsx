@@ -1,16 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Dashboard.css"; 
-import NavigationBar from "./navigationBar";
 import { useNavigate } from "react-router-dom";
+import NavigationBar from "./navigationBar";
 import { FaBell } from "react-icons/fa"; //Importing React Icon instead of creating one
+import { db } from "../firebase/config";
+import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 function AdminDashboard() {
-    const navigate = useNavigate();
-    const [surveyData, setSurveyData] = useState([
-        { title: "Survey 1", quantity: 10, date: new Date("2024-10-30T09:41:00") },
-        { title: "Survey 2", quantity: 20, date: new Date("2024-10-29T08:30:00") },
-        { title: "Survey 3", quantity: 15, date: new Date("2024-10-28T07:15:00") },
-    ]);
+    const handleNavigation = useNavigate();
+    const [surveyData, setSurveyData] = useState([]);
 
     // Polling or real-time listener example (stubbed for now)
     useEffect(() => {
@@ -20,6 +18,43 @@ function AdminDashboard() {
         }, 30000); // Poll every 30 seconds
         return () => clearInterval(interval);
     }, []);
+
+    useEffect(() => {
+        const fetchSurveyData = async () => {
+            try {
+                const surveyCollection = collection(db, "info");
+                const surveySnapshot = await getDocs(surveyCollection);
+                const surveys = surveySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data(),
+                    date: doc.data().submittedAt ? doc.data().submittedAt.toDate() : null,
+                }));
+                setSurveyData(surveys);
+            } catch (error) {
+                console.error("Error fetching surveys:", error);
+            }
+        };
+
+        fetchSurveyData();
+    }, []);
+
+    const handleApprove = (id) => {
+        console.log("Approving survey with ID:", id);
+  };
+
+    const handleDecline = (id) => {
+        console.log("Declining survey with ID:", id);
+  };
+
+    const handleDeleteSurvey = async (surveyId) => {
+        
+        try {
+            await deleteDoc(doc(db, "info", surveyId));
+            setSurveyData(surveyData.filter(survey => survey.id !== surveyId)); // Update state after deletion
+        } catch (error) {
+            console.error("Error deleting survey:", error);
+        }
+    };
   return (
    
     <div>
@@ -31,7 +66,7 @@ function AdminDashboard() {
                         {/* Limit the number of surveys seen with slice. Only 5 will show up*/}
                         {surveyData.slice(0,5).map((survey, index) => (
                             <div key={index} className="dropdown-item">
-                                <p>{survey.title} - {survey.date.toLocaleDateString()}</p>
+                                <p>{survey.title} - {survey.date ? survey.date.toLocaleDateString() : "No date available" }</p>
                             </div>
                         ))}
                         <a onClick={() => handleNavigation("/surveys")} className ="dropdown-item">See more...</a>
@@ -82,28 +117,33 @@ function AdminDashboard() {
             
             
 
-           { /*<div className="survey-container">
-                {surveyData.map((survey, index) => (
-                    <div className="survey-item" key={index}>
+           <div className="survey-container">
+                {surveyData.map((survey) => (
+                    <div className="survey-item" key={survey.id}>
                         <div className="survey card">
-                            <span className="survey-title">{survey.title}</span>
+                            <span className="survey-title">{survey.surveyData?.title}</span>
                             <p className="survey-description">
-                                This is the body text where you will see information on survey submitted.
+                                {survey.surveyData?.description || "No description available."}
                             </p>
                             <div className="survey-actions">
                                 <div className="action-buttons">
-                                    <button className="approve-button">Approve</button>
-                                    <button className="decline-button">Decline</button>
+                                    <button className="approve-button"
+                                    onClick={() => handleApprove(survey.id)} >Approve</button>
+                                    
+                                    <button className="decline-button"
+                                    onClick={() => handleDecline(survey.id)}>Decline</button>
+                                    
+                                    <button className="delete-button"
+                                    onClick={() => handleDeleteSurvey(survey.id)}>Delete</button>
                                 </div>
                                 <span className="survey-date">
-                                    {survey.date.toLocaleString()} date submitted
+                                {survey.date ? survey.date.toLocaleDateString() : "No date available"}- Date submitted
                                 </span>
                             </div>
                         </div>
                     </div>
-                ))}     //possibly use this for survey box information that admin can check and accept
-                        //useful in the survey page on dashboard 
-            </div> */}
+                ))}     
+            </div> 
         </div>
     );
 }

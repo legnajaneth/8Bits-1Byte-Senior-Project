@@ -209,7 +209,7 @@ body {
     background-color: #3182ce; 
 }
 
-.decline-button {
+.decline-button , .delete-button {
     background-color: #f56565; 
     color: white;
     padding: 0.5rem 1rem; 

@@ -8,6 +8,7 @@ import ResultPage from "./pages/ResultPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage.jsx";
 import ForgotPassword from "./components/ForgotPassword.jsx";
 import SurveyPlanPage from "./components/SurveyPlanPage.jsx";
+import SubmittedSurveys from "./components/SubmittedSurvey.jsx"
 import SubscriptionServiceInfoPage from "./components/SubscriptionServiceInfoPage.jsx";
 import PaypalCheckoutButton from "./components/PaypalCheckoutButton.jsx";
 import PasswordResetForm from "./components/PasswordResetForm"; // Make sure to import this
@@ -30,6 +31,7 @@ function App() {
             <Route path="/pay-pal-checkout" element={<PaypalCheckoutButton />} />
             <Route path="/reset-password" element={<PasswordResetForm />} />
             <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
+            <Route path="/surveys" element={<SubmittedSurveys/>} />
             {/* ... any other routes */}
           </Routes>
         </div>
