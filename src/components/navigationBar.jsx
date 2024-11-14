@@ -86,6 +86,7 @@ function NavigationBar() {
                     onSignOut={onSignOut}
                     onClose={toggleLogoutVisibility}
                     show={showLogout}
+                    navigate={navigate}
                   />
                 )}
               </div>

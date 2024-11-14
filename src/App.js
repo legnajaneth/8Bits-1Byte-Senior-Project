@@ -13,6 +13,7 @@ import SubscriptionServiceInfoPage from "./components/SubscriptionServiceInfoPag
 import PaypalCheckoutButton from "./components/PaypalCheckoutButton.jsx";
 import PasswordResetForm from "./components/PasswordResetForm"; // Make sure to import this
 import AdminDashboard from "./components/Dashboard.jsx";
+import SettingsPage from "./components/UserSettings.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route path="/reset-password" element={<PasswordResetForm />} />
             <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
             <Route path="/surveys" element={<SubmittedSurveys/>} />
+            <Route path="/settings" element={<SettingsPage/>}/>
             {/* ... any other routes */}
           </Routes>
         </div>

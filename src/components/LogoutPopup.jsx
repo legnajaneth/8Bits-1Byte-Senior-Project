@@ -1,14 +1,32 @@
 // LogoutPopup.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/config.js";
 import { colors } from "../colors";
 
-const LogoutPopup = ({ onSignOut, onClose, show }) => {
+  const LogoutPopup = ({ onSignOut, onClose, show, navigate }) => {
+    const popupRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        onClose();
+      } //Closes the popup if it detects a click outside.
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
   const handleSignOut = () => {
     signOut(auth).then(onSignOut).catch((error) => {
       console.error("Error signing out:", error);
     });
+  };
+  
+  const handleNavigateSettings = () => {
+    navigate("/settings");
   };
 
   const popupStyle = {
@@ -38,9 +56,9 @@ const LogoutPopup = ({ onSignOut, onClose, show }) => {
   };
 
   return (
-    <div style={popupStyle}>
+    <div ref={popupRef} style={popupStyle}>
       <button style={buttonStyle} onClick={handleSignOut}>Logout</button>
-      <button style={buttonStyle} onClick={onClose}>Cancel</button>
+      <button style={buttonStyle} onClick={handleNavigateSettings}>Settings</button>
     </div>
   );
 }
