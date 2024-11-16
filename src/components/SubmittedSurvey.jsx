@@ -12,9 +12,9 @@ function SubmittedSurveys() {
       try {
         const surveysSnapshot = await getDocs(collection(db, "info"));
         const surveysList = surveysSnapshot.docs.map(doc => ({
-          id: doc.id,  
-          ...doc.data(), 
-          date: doc.data.submittedAt ? doc.data.submittedAt.toDate() : null,
+          id: doc.id,
+          ...doc.data(),
+          submittedAt: doc.data().submittedAt ? doc.data().submittedAt.toDate() : null,
         }));
         setSurveys(surveysList);
       } catch (error) {
@@ -23,13 +23,12 @@ function SubmittedSurveys() {
     };
 
     fetchSurveys();
-  }, []); 
+  }, []);
 
   const handleSurveyClick = (survey) => {
     setSelectedSurvey(survey);
   };
 
-  
   const renderSurveyAnswers = (field) => {
     if (Array.isArray(field)) {
       return field.map((item, index) => (
@@ -44,15 +43,13 @@ function SubmittedSurveys() {
     <div>
       {selectedSurvey ? (
         <div className="survey-details">
-          <h2>Survey Number: {selectedSurvey.id}</h2> 
-          <p>{selectedSurvey.title}</p>
-          <p>{selectedSurvey.description}</p> 
-          <p>{selectedSurvey.submittedAt?.toLocaleDateString()}</p> 
+          <h2>Survey Number: {selectedSurvey.id}</h2>
+          <p>{selectedSurvey.title || "No title available"}</p>
+          <p>{selectedSurvey.description || "No description available"}</p>
+          <p>{selectedSurvey.submittedAt?.toLocaleDateString()}</p>
 
-          
           {Object.keys(selectedSurvey).map((key, index) => {
-           
-            if (key === 'id' || key === 'title' || key === 'description' || key === 'submittedAt' || key === 'status') {
+            if (["id", "title", "description", "submittedAt", "status"].includes(key)) {
               return null;
             }
             return (
@@ -72,12 +69,12 @@ function SubmittedSurveys() {
             <div
               key={survey.id}
               className="survey-item"
-              onClick={() => handleSurveyClick(survey)} 
+              onClick={() => handleSurveyClick(survey)}
             >
-              <h3>Survey ID: {survey.id}</h3>  
-              <p>{survey.title}</p>  
-              <p>Status: {survey.status}</p>  
-              <p>Submitted on: {survey.submittedAt?.toLocaleDateString()}</p>  
+              <h3>Survey ID: {survey.id}</h3>
+              <p>{survey.title || "No title available"}</p>
+              <p>Status: {survey.status || "No status available"}</p>
+              <p>Submitted on: {survey.submittedAt?.toLocaleDateString() || "No date available"}</p>
             </div>
           ))}
         </div>

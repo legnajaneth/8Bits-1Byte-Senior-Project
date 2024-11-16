@@ -19,7 +19,12 @@ class Service {
     }
 
     createSurvey(survey) {
-        return axios.post(EXTERNSHIP_WEBSITE_URL + 'surveys/', survey);
+        const surveyWithTimestamp = {
+            ...survey,
+            // Add current timestamp
+            submittedAt: new Date().toISOString() 
+        };
+        return axios.post(EXTERNSHIP_WEBSITE_URL + 'surveys/', surveyWithTimestamp);
     }
 
     getAllSurveys() {
