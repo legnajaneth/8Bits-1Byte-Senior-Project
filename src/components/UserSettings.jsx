@@ -2,9 +2,15 @@
 import React, { useEffect, useState } from "react";
 import "./UserSettings.css";
 import NavigationBar from "./navigationBar";
-
+import { useNavigate } from "react-router-dom";
 
 function SettingsPage(){
+   const navigate = useNavigate();
+
+   const handleDelete = () => {
+      navigate("/delete-account");
+   };
+   
    return(
       <div>
          <NavigationBar/>
@@ -19,7 +25,9 @@ function SettingsPage(){
                <p className="title">New password</p>
                <input className="textBox" type="text" id="password" placeholder="Enter your new password" />
             </div>
-            <button className="deleteButton">Delete Account</button>
+            <button className="deleteButton" onClick={handleDelete}>
+               Delete Account
+            </button>
          </div>
       </div>
    );

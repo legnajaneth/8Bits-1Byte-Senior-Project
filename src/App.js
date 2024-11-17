@@ -15,6 +15,8 @@ import PasswordResetForm from "./components/PasswordResetForm"; // Make sure to 
 import AdminDashboard from "./components/Dashboard.jsx";
 import SettingsPage from "./components/UserSettings.jsx";
 import SurveyList from "./components/SurveyList.jsx";
+import DeleteAccount from "./components/DeleteAccount.jsx";
+import AccountDeletedMsg from "./components/AccountDeletedMsg.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
@@ -40,7 +42,8 @@ function App() {
             <Route path="/surveys" element={<SubmittedSurveys />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/survey-list" element={<SurveyList />} />
-
+            <Route path="/delete-account" element={<DeleteAccount />} />
+            <Route path="/account-deleted" element={<AccountDeletedMsg />} />
             {/* ... any other routes */}
           </Routes>
         </div>
