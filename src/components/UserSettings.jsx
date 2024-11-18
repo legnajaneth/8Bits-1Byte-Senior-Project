@@ -25,7 +25,9 @@ function SettingsPage(){
                <p className="title">New password</p>
                <input className="textBox" type="text" id="password" placeholder="Enter your new password" />
             </div>
-
+            {/* still working */}
+            <button className="clickableText">Manage Email</button>
+            <button className="clickableText">Manage Password</button>
             <button className="deleteButton">Delete Account</button>
             <button className="deleteButton" onClick={handleDelete}>
                Delete Account

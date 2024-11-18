@@ -46,6 +46,8 @@ function App() {
 
             <Route path="/delete-account" element={<DeleteAccount />} />
             <Route path="/account-deleted" element={<AccountDeletedMsg />} />
+            <Route path="/faq" element={<FaqPage />} />
+
             {/* ... any other routes */}
           </Routes>
         </div>
