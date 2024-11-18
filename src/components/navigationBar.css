@@ -52,6 +52,17 @@ html{
   border-radius: 7px;
   white-space: nowrap;
 }
+.faq {
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.4s ease-in-out;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.faq:hover {
+  background-color: #68986f;
+}
+
 
 /* Media query, responsive design styles for mobile devices */
 /* Styles targeting the Nav bar 'Fill out Survey' button and 'navigationStyle' */

@@ -52,3 +52,15 @@
 .deleteButton:hover{
    background-color: rgba(103, 36, 36, 0.2);
 }
+/* still working  */
+.clickableText {
+   font-size: 18px;
+   color: blue;
+   cursor: pointer;
+   margin: 10px 0; /* Add spacing between the buttons */
+}
+.clickableText:hover {
+   color: blue;
+   text-decoration: underline;
+   cursor: pointer;
+ }

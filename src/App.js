@@ -16,6 +16,7 @@ import AdminDashboard from "./components/Dashboard.jsx";
 import SettingsPage from "./components/UserSettings.jsx";
 import SurveyList from "./components/SurveyList.jsx";
 import { ChakraProvider } from "@chakra-ui/react";
+import FaqPage from "./components/FaqPage";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
             <Route path="/surveys" element={<SubmittedSurveys />} />
             <Route path="/settings" element={<SettingsPage />} />
             <Route path="/survey-list" element={<SurveyList />} />
+            <Route path="/faq" element={<FaqPage />} />
 
             {/* ... any other routes */}
           </Routes>

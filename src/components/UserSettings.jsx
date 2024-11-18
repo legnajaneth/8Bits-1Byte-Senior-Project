@@ -20,6 +20,9 @@ function SettingsPage(){
                <input className="textBox" type="text" id="password" placeholder="Enter your new password" />
             </div>
             <button className="deleteButton">Delete Account</button>
+            {/* still working */}
+            <button className="clickableText">Manage Email</button>
+            <button className="clickableText">Manage Password</button>
          </div>
       </div>
    );

@@ -72,6 +72,11 @@ function NavigationBar() {
               <button className="home-fill-survey" onClick={handleAddExternshipClick}>
                 Fill Out Survey
               </button>
+              <li>
+                <Link className="home" to="/faq">
+                  FAQ
+                </Link>
+              </li>
             </ol>
             {user ? (
               <div className="user-container" style={{ position: "relative" }}>
