@@ -1,11 +1,13 @@
 # Enhance Audiology Externship Website
-![Project Logo](./assets/project_logo.png)
+![Screenshot 2024-11-20 at 8 31 52 AM](https://github.com/user-attachments/assets/698a896c-6b19-4682-9729-e86ef20f18c5)
+
 
 ## Synopsis
 
 The **Enhance Audiology Externship Website** is an innovative platform designed to assist audiology students across the country in finding externship opportunities. It allows students to complete surveys, access detailed externship information, and manage accounts with ease. Developed by **Team 8 Bits 1 Byte** at California State University, Sacramento, this project combines user-friendly design and powerful backend functionalities.
 
-![Prototype](./assets/screenshot_homepage.png)
+![Screenshot 2024-11-20 at 8 34 44 AM](https://github.com/user-attachments/assets/1dc05631-48de-4b2a-a6bf-5956aa27b9ba)
+
 
 ---
 
@@ -13,10 +15,8 @@ The **Enhance Audiology Externship Website** is an innovative platform designed 
 
 ### Core Features
 - **Account Management**: Sign up, login, and manage personal details.
-  ![Account Settings](./assets/account_settings.png)
 - **Push Notifications**: Alerts for survey submissions and admin approvals.
 - **Survey Management**: Timestamped survey submissions, admin approval workflows, and database integration.
-  ![Admin Dashboard](./assets/admin_dashboard.png)
 - **Payment System**: Secure payment account setup and management.
 - **Admin Portal**: Tools for administrators to manage surveys and customize the site.
 
