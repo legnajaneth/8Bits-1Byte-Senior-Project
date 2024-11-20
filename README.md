@@ -1,17 +1,68 @@
-﻿# 8Bits-1Byte-Senior-Project
+# Enhance Audiology Externship Website
+![Project Logo](./assets/project_logo.png)
 
-# Abdel Taeha
+## Synopsis
 
-# Legna Saca Archuleta
+The **Enhance Audiology Externship Website** is an innovative platform designed to assist audiology students across the country in finding externship opportunities. It allows students to complete surveys, access detailed externship information, and manage accounts with ease. Developed by **Team 8 Bits 1 Byte** at California State University, Sacramento, this project combines user-friendly design and powerful backend functionalities.
 
-# Alejandro Madera
+![Prototype](./assets/screenshot_homepage.png)
 
-# Juan Carrera Bravo
+---
 
-# Antonio Carrera
+## Features
 
-# Dylan Dumitru
+### Core Features
+- **Account Management**: Sign up, login, and manage personal details.
+  ![Account Settings](./assets/account_settings.png)
+- **Push Notifications**: Alerts for survey submissions and admin approvals.
+- **Survey Management**: Timestamped survey submissions, admin approval workflows, and database integration.
+  ![Admin Dashboard](./assets/admin_dashboard.png)
+- **Payment System**: Secure payment account setup and management.
+- **Admin Portal**: Tools for administrators to manage surveys and customize the site.
 
-# Matthew Bernardino-Junio
+### Optional Features (Future Scope)
+- Advanced search functionality for records.
+- Code-free customization tools for the website.
 
-# Steven Ngo
+---
+
+## Testing
+
+Testing will be performed iteratively during development. Placeholder for the following:
+- **Unit Testing**: Focus on critical components such as survey submissions and payment workflows.
+- **Integration Testing**: Ensuring seamless interaction between modules.
+- **User Acceptance Testing (UAT)**: Validating functionalities meet user needs.
+
+---
+
+## Timeline & Milestones
+
+Using **JIRA** for task tracking, here are the key milestones for our project:
+
+| Date           | Milestone                                  | Status       |
+|----------------|------------------------------------------|-------------|
+| **09/2024**    | Initial Project Charter Approval          | ✅ Completed |
+| **10/2024**    | Functional Requirements Document          | ✅ Completed |
+| **11/2024**    | Basic Survey Submission Feature           | 🔄 In Progress |
+| **01/2025**    | Payment System Implementation             | 🔄 In Progress |
+| **03/2025**    | Admin Portal with Full Features           | ⬜ Upcoming   |
+| **05/2025**    | Final Product Delivery                    | ⬜ Upcoming   |
+
+---
+
+## Team Members
+
+Meet **Team 8 Bits 1 Byte**:
+| Name                 | Email Address                    |
+|----------------------|----------------------------------|
+| Abdel R. Taeha       | abdeltaehass@gmail.com          |
+| Juan Carrera Bravo   | juancarrera20011231@gmail.com   |
+| Legna Saca Archuleta | legnareyna@gmail.com            |
+| Antonio Carrera      | carreraantonioc@gmail.com       |
+| Steven Ngo           | ngosteven27@gmail.com           |
+| Alejandro Madera     | amadera2003@gmail.com           |
+| Dylan Dumitru        | dylanddumitru@gmail.com         |
+| Matthew Bernardino   | matthewbjunio@gmail.com         |
+
+---
+
