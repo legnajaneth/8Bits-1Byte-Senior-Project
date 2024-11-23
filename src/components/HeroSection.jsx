@@ -13,6 +13,7 @@ function HeroSection() {
  
   const checkUserSubscription = async () => {
     const user = auth.currentUser;
+    
     if (!user) {
       // If user is not signed in, redirect to sign-in page
       navigate("/login"); // Redirect to sign-in page

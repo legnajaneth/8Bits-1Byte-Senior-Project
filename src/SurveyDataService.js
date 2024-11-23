@@ -1,15 +1,11 @@
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getFirestore, collection, addDoc, Timestamp } from "firebase/firestore";
 
 class SurveyDataService {
   constructor() {
     this.firestore = getFirestore(); // Get the Firestore database
     this.surveyResponsesColRef = collection(this.firestore, 'info'); // Reference to the 'info' collection in Firestore
+    this.surveyMetadata = collection(this.firestore, 'surveyData')
     this.surveyCompletionCallback = null;
-    //Dylan Dumitru - TODO QVDM-65
-    // Initialize the EmailNotificationService
-    //this.emailNotificationService = new EmailNotificationService();
-    // Set the callable function for sending notifications (assuming you have it set up in Firebase Functions)
-    //this.emailNotificationService.setSendNotificationFunction(httpsCallable(firebase.functions(), 'sendNotification'));
   }
 
   setSurveyCompletionCallback(callback) {
@@ -21,10 +17,9 @@ class SurveyDataService {
       // Add a new document to the 'info' collection in Firestore
       const docRef = await addDoc(this.surveyResponsesColRef, responseData);
       console.log("Document written with ID: ", docRef.id); // Log the document ID
-
-      //Dylan Dumitru - TODO QVDM-65
-      //Send email notification to the admin
-      //await this.emailNotificationService.sendEmailNotification('admin@example.com', 'A new survey has been submitted!');
+      
+      // Add the docId (as surveyId) and date to the 'SurveyData' collection
+      await this.saveSurveyMetadata(docRef.id);
 
       // If a survey completion callback has been set, call it with the success status and the new document's ID
       if (this.surveyCompletionCallback) {
@@ -39,6 +34,23 @@ class SurveyDataService {
         this.surveyCompletionCallback(false, null);
       }
       throw error; // Rethrow the error
+    }
+  }
+
+  async saveSurveyMetadata(docId) {
+    try {
+      const metadata = {
+        surveyId: docId, // Use the Firestore document ID as surveyId
+        statue: 'pending',
+        date: Timestamp.now(), // Add the current date in ISO format
+      };
+
+      // Add the metadata to the 'SurveyData' collection
+      await addDoc(this.surveyMetadata, metadata);
+      console.log("Survey metadata saved: ", metadata);
+    } catch (error) {
+      console.error("Error saving survey metadata: ", error);
+      throw error; // Rethrow the error if saving metadata fails
     }
   }
 

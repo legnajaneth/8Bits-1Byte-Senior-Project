@@ -54,7 +54,6 @@ function NavigationBar() {
   return (
     <>
       <div className="navigationStyle">
-        
         <div className="innerContainerStyle">
           <img src={logo} alt="Logo" className="imageStyle" />
           <div className="clickableComponentsStyle">
@@ -69,14 +68,9 @@ function NavigationBar() {
                   Pricing
                 </Link>
               </li>
-              <button className="home-fill-survey" onClick={handleAddExternshipClick}>
+              <button className="home" onClick={handleAddExternshipClick}>
                 Fill Out Survey
               </button>
-              <li>
-                <Link className="home" to="/faq">
-                  FAQ
-                </Link>
-              </li>
             </ol>
             {user ? (
               <div className="user-container" style={{ position: "relative" }}>
@@ -91,7 +85,6 @@ function NavigationBar() {
                     onSignOut={onSignOut}
                     onClose={toggleLogoutVisibility}
                     show={showLogout}
-                    navigate={navigate}
                   />
                 )}
               </div>
@@ -100,7 +93,6 @@ function NavigationBar() {
             )}
           </div>
         </div>
-        
       </div>
       {addExternshipButton && (
         <div

@@ -8,19 +8,12 @@ body {
     align-items: center;
     background: none;
 }
-
-.section-layout
-{
-    display: flex;
-    justify-content: center;
-}
-
 .section-box{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 20px; 
     height: auto;
-    justify-content: center;
+    margin-left:250px;
     gap: 40px;
 }
 .box{ 
@@ -44,7 +37,7 @@ body {
     margin-top: 10px;
     display: flex; 
     justify-content: center;
-    gap: 200px;
+    gap: 200px; 
 }
 .link-button {
     background-color: var(--secondary-color, #b0ccb4);
@@ -58,97 +51,9 @@ body {
     font-weight: 600;  
     text-decoration: none; 
     transition: background-color 0.3s; 
-    cursor: pointer;
 }
 .link-button:hover {
     background-color: #68986f;
-}
-
-/* Media query, responsive design styles for mobile devices */
-/* Styles targeting devices with 770px display */
-@media (max-width: 770px)
-{
-    .dashboard-links 
-    {
-        position: relative;
-        align-items: center;
-        gap: 50px;
-    }
-
-    .link-button 
-    {
-        width: 120px;
-        height: 50px;
-        font-size: 15px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .section-box
-    {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        align-items: center;
-        max-width: 90%;
-    }
-
-    .box
-    { 
-        height: 375px;
-        width: 550px;
-        width: 90%;
-        padding: 0;
-    }
-
-    .box h1
-    {
-        text-align: center;
-    
-    }
-}
-
-/* Media query, responsive design styles for mobile devices */
-/* Styles targeting devices with 1150px display */
-@media (max-width: 1150px)
-{
-    .dashboard-links 
-    {
-        position: relative;
-        align-items: center;
-        gap: 30px;
-        margin-bottom: 150px;
-    }
-
-   .section-layout
-   {
-    display: flex;
-   } 
-   .section-box
-    { 
-        display: flex;
-        flex-direction: column;
-        height: 375px;
-        width: 550px;
-    }
-    .box
-    {
-        height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .survey-info
-    {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    
-
 }
 
 .survey-container {
@@ -209,7 +114,7 @@ body {
     background-color: #3182ce; 
 }
 
-.decline-button , .delete-button {
+.decline-button {
     background-color: #f56565; 
     color: white;
     padding: 0.5rem 1rem; 
@@ -226,67 +131,4 @@ body {
 .survey-date {
     color: #718096; 
     font-size: 0.75rem; 
-}
-.admin-dashboard-nav{
-    background-color: rgba(240,254,240,255);
-    height: 3.25rem;
-    display: flex;
-    align-items: center;
-    margin-left: -50px;
-}
-.notification-icon-container{
-    display: flex;
-    align-items: center;
-    position: relative;
-    right: -80px;
-}
-.notification-bell {
-    height: 35px;
-    width: 35px;
-    border-radius: 20px;
-    padding: 5px 5px;
-    margin-left: 3px;
-    margin-right: 3px;
-    position: relative;
-    right: 50%;
-    cursor: pointer;
-    transition: background-color 0.4s ease-in-out;
-}
-.notification-bell:hover{
-    background-color: #68986f;
-}
-.notification-bell-count{
-    background-color: red;
-    color: white;
-    font-size: 8px;
-    position: absolute;
-    top: 1px;
-    padding: 1px 5px;
-    border-radius: 10px;
-}
-.dropdown {
-    background-color: white;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    display: none;
-    position: absolute;
-    top: 35px;
-    left: -20px;
-    min-width: 205px;
-    padding: 12px;
-    border-radius: 4px;
-    z-index: 1;
-
-}
-.notification-icon-container:hover .dropdown{
-    display: block;
-}
-.dropdown-item {
-    padding: 8px 12px;
-    cursor: pointer;
-    display: flex;
-    border-bottom: 1px solid black;
-}
-
-.dropdown-item:hover {
-    background-color: rgb(240, 240, 240);
 }

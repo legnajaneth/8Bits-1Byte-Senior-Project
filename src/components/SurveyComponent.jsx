@@ -3,12 +3,15 @@ import { Model } from "survey-core";
 import { Survey } from "survey-react-ui";
 import "survey-core/defaultV2.min.css";
 import SurveyDataService from '../SurveyDataService';
+import { useNavigate } from "react-router-dom";
 
 
 function SurveyComponent({ surveyJson }) {
   const [surveyModel, setSurveyModel] = useState(null);
   const [savedMessage, setSavedMessage] = useState("");
   const surveyDataService = new SurveyDataService();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const survey = new Model(surveyJson);
@@ -140,10 +143,8 @@ function SurveyComponent({ surveyJson }) {
     const surveyData = sender.data;
     try {
       const docId = await surveyDataService.saveSurveyResponse(surveyData);
-      console.log("Survey data saved to Firestore with doc ID: ", docId);
       setSavedMessage("Your survey response has been saved.");
     } catch (error) {
-      console.error("Error saving survey data to Firestore:", error);
       setSavedMessage("There was an error saving your survey response. Please try again.");
     }
   });

@@ -21,9 +21,29 @@ export default function SignInForm() {
         email,
         password
       );
-      localStorage.setItem("accessToken", userCredential.user.accessToken);
+      const user = userCredential.user
+      localStorage.setItem("accessToken", user.accessToken);
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/"); // Redirect to home page
+      
+      // Get the user's role from Firestore
+      const db = getFirestore();
+      const userDocRef = doc(db, "users", user.uid);  // Assuming 'users' is the collection where user data is stored
+      const userDoc = await getDoc(userDocRef);
+
+      if (userDoc.exists()) {
+        const userData = userDoc.data();
+        const role = userData.role;  // Assuming 'role' is a field in the Firestore document
+
+        // Handle redirection based on the role
+        if (role && role == "admin") {
+          navigate("/admin-dashboard"); // Admin page
+        } else {
+          navigate("/"); // Regular home page
+        }
+      } else {
+        console.log("No user document found!");
+        setErrorMessage("User data not found.");
+      }
     } catch (error) {
       setErrorMessage("Incorrect email or password.");
     }

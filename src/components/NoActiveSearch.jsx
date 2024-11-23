@@ -1,7 +1,6 @@
 import React from "react";
 import { Text, Heading } from '@chakra-ui/react'
 import searchIcon from '../images/search.svg'
-import styles from "./HeroSectionStyle";
 
 function NoActiveSearch(){
 

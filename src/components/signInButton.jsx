@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase/config";
+import SignUpButton from "./signUpButton.jsx";
 import LogoutPopup from "./LogoutPopup";
 import { Button } from "@chakra-ui/react";
 import { colors } from "../colors";
 
 function SignInButton() {
+  const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [showLogoutPopup, setShowLogoutPopup] = useState(false);
 
@@ -66,6 +68,7 @@ function SignInButton() {
               Sign in
             </Button>
           </Link>
+          <SignUpButton />
         </>
       )}
     </>

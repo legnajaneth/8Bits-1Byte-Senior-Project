@@ -3,42 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 20vh;
-}
-
-/* Media query, responsive design styles for mobile devices */
-/* Styles targeting very narrow devices with 492px display */
-@media (min-width: 492px)
-{
-  .container 
-  {
-    height: auto;
-    margin-top: 20px;
-    padding-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 300px;
-    width: 100%
-  }
-
-  .searchBar
-  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-
-/* Media query, responsive design styles for mobile devices */
-/* Styles targeting devices with 600px display */
-@media (max-width: 601px)
-{
-  .container 
-  {
-    height: 25vh;
-  }
+  height: 10vh;;
 }
 
 .container H1 {
@@ -93,12 +58,6 @@
   background-position-x: 8px;
   background-color: #68986f40;
   color: #111611;
-}
-
-.searchIcon
-{
-  width: 6rem;
-  height: 6rem;
 }
 
 input::placeholder {
