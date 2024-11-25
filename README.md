@@ -61,9 +61,9 @@ Testing will be performed iteratively during development. Placeholder for the fo
 
 ## Tech Stack
 
-**Front end**: React, JavaScript
-**Back end**: Firebase
-**APIs**: Firebase database / Firestore database, PyaPal
+- **Front end**: React, JavaScript
+- **Back end**: Firebase
+- **APIs**: Firebase database / Firestore database, PyaPal
 
 ---
 
@@ -84,5 +84,5 @@ Using **JIRA** for task tracking, here are the key milestones for our project:
 
 ## Learn more
 
-![Learn more about React](https://react.dev/)
-![Learn more about Firebase]()
+- [Learn more about React](https://react.dev/)
+- [Learn more about Firebase](https://firebase.google.com/docs)
