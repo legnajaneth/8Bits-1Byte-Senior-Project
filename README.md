@@ -1,13 +1,37 @@
+## Table of Contents
+
+Placeholder
+
+---
+
 # Enhance Audiology Externship Website
 ![Screenshot 2024-11-20 at 8 31 52 AM](https://github.com/user-attachments/assets/698a896c-6b19-4682-9729-e86ef20f18c5)
 
+---
+
+## Team Members
+
+Meet **Team 8 Bits 1 Byte**:
+| Name                 | Email Address                    |
+|----------------------|----------------------------------|
+| Abdel R. Taeha       | abdeltaehass@gmail.com          |
+| Juan Carrera Bravo   | juancarrera20011231@gmail.com   |
+| Legna Saca Archuleta | legnareyna@gmail.com            |
+| Antonio Carrera      | carreraantonioc@gmail.com       |
+| Steven Ngo           | ngosteven27@gmail.com           |
+| Alejandro Madera     | amadera2003@gmail.com           |
+| Dylan Dumitru        | dylanddumitru@gmail.com         |
+| Matthew Bernardino   | matthewbjunio@gmail.com         |
+
+---
 
 ## Synopsis
 
 The **Enhance Audiology Externship Website** is an innovative platform designed to assist audiology students across the country in finding externship opportunities. It allows students to complete surveys, access detailed externship information, and manage accounts with ease. Developed by **Team 8 Bits 1 Byte** at California State University, Sacramento, this project combines user-friendly design and powerful backend functionalities.
 
-![Screenshot 2024-11-20 at 8 34 44 AM](https://github.com/user-attachments/assets/1dc05631-48de-4b2a-a6bf-5956aa27b9ba)
+Our goal is to make easier for audiology students to find relevant externships for their needs, while the admin has easy access to various site functions to ensure a smooth process. We aim to make the site easy to use, and useful for those visiting.
 
+![Screenshot 2024-11-20 at 8 34 44 AM](https://github.com/user-attachments/assets/1dc05631-48de-4b2a-a6bf-5956aa27b9ba)
 
 ---
 
@@ -35,6 +59,14 @@ Testing will be performed iteratively during development. Placeholder for the fo
 
 ---
 
+## Tech Stack
+
+**Front end**: React, JavaScript
+**Back end**: Firebase
+**APIs**: Firebase database / Firestore database, PyaPal
+
+---
+
 ## Timeline & Milestones
 
 Using **JIRA** for task tracking, here are the key milestones for our project:
@@ -50,19 +82,7 @@ Using **JIRA** for task tracking, here are the key milestones for our project:
 
 ---
 
-## Team Members
+## Learn more
 
-Meet **Team 8 Bits 1 Byte**:
-| Name                 | Email Address                    |
-|----------------------|----------------------------------|
-| Abdel R. Taeha       | abdeltaehass@gmail.com          |
-| Juan Carrera Bravo   | juancarrera20011231@gmail.com   |
-| Legna Saca Archuleta | legnareyna@gmail.com            |
-| Antonio Carrera      | carreraantonioc@gmail.com       |
-| Steven Ngo           | ngosteven27@gmail.com           |
-| Alejandro Madera     | amadera2003@gmail.com           |
-| Dylan Dumitru        | dylanddumitru@gmail.com         |
-| Matthew Bernardino   | matthewbjunio@gmail.com         |
-
----
-
+![Learn more about React](https://react.dev/)
+![Learn more about Firebase]()
