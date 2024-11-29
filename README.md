@@ -1,6 +1,14 @@
 ## Table of Contents
 
-Placeholder
+- [Enhance Audiology Externship Website](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#enhance-audiology-externship-website)
+- [Team Members](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#team-members)
+- [Synopsis](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#synopsis)
+- [Features](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#features)
+- [Deployment](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#deployment)
+- [Testing](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#testing)
+- [Tech Stack](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#tech-stack)
+- [Timeline & Milestones](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#timeline--milestones)
+- [Learn More](https://github.com/legnajaneth/8Bits-1Byte-Senior-Project?tab=readme-ov-file#learn-more) 
 
 ---
 
@@ -119,7 +127,7 @@ Using **JIRA** for task tracking, here are the key milestones for our project:
 
 ---
 
-## Learn more
+## Learn More
 
 - [Learn more about React](https://react.dev/)
 - [Learn more about Firebase](https://firebase.google.com/docs)
