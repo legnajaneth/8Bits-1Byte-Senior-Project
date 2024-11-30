@@ -1,5 +1,10 @@
+html{
+  background-color: #F0FEF0;
+  /*background-image (below) didn't properly scale when zoomed out*/
+}
 .navigationStyle {
   display: flex;
+  width: 100%;
   height: 3.25rem;
   padding: 0rem 4rem;
   flex-direction: column;
@@ -7,13 +12,18 @@
   align-items: center;
   border-bottom: 1px solid black;
   background-image: url("../images/backround-img.png");
+  background-size: contain;
+  background-position: center;
+  width: 100%;
 }
+
 
 .innerContainerStyle {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+  width: 100%;
 }
 
 .clickableComponentsStyle {
@@ -35,7 +45,52 @@
   border-radius: 7px;
 }
 
-.home:hover {
+.home-fill-survey {
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.4s ease-in-out;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.faq {
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.4s ease-in-out;
+  padding: 0.3rem 1rem;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.faq:hover {
+  background-color: #68986f;
+}
+
+
+/* Media query, responsive design styles for mobile devices */
+/* Styles targeting the Nav bar 'Fill out Survey' button and 'navigationStyle' */
+@media(max-width: 600px)
+{
+  .home-fill-survey 
+  {
+    font-size: 16px;
+  }
+
+  .navigationStyle 
+  {
+    border-bottom: none;
+    height: 2.25rem;
+
+  }
+
+  .clickableComponentsStyle 
+  {
+    background-image: url("../images/backround-img.png");
+    border-bottom: 1px solid black;
+    
+  }
+
+}
+
+
+.home:hover .home-fill-survey:hover {
   background-color: #68986f;
 }
 
@@ -47,4 +102,3 @@
   overflow: hidden;
   height: 100%;
 }
-
