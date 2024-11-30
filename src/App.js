@@ -8,6 +8,8 @@ import ResultPage from "./pages/ResultPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage.jsx";
 import ForgotPassword from "./components/ForgotPassword.jsx";
 import SurveyPlanPage from "./components/SurveyPlanPage.jsx";
+import SurveyList from "./components/SurveyList.jsx";
+import SubscriptionServiceInfoPage from "./components/SubscriptionServiceInfoPage.jsx";
 import PaypalCheckoutButton from "./components/PaypalCheckoutButton.jsx";
 import PasswordResetForm from "./components/PasswordResetForm"; // Make sure to import this
 import AdminDashboard from "./components/Dashboard.jsx";
@@ -37,6 +39,7 @@ function App() {
             <Route path="/reset-password" element={<PasswordResetForm />} />
 
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
+            <Route path="/survey-list" element={<SurveyList />} />
             <Route path="/settings" element={<SettingsPage />} />
 
             <Route path="/delete-account" element={<DeleteAccount />} />
